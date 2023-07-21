@@ -17,14 +17,26 @@ public class ShowActivity extends AppCompatActivity {
 
         //Obtenemos los valores desde el MainActivity
         Bundle extras = getIntent().getExtras();
+        //Obtenemos valores desde el objeto Superheroe
+        Superheroe sh = extras.getParcelable(MainActivity.SUPERHEROE);
+        binding.showTituloHeroe.setText(sh.getName());
+        binding.showalterEgo.setText(sh.getAlter_ego());
+        binding.showHistoria.setText(sh.getHistoria());
+        binding.showRatingBar.setRating(sh.getEnergia());
+        /*
+        //Obtención de valores desde MainActivity sin crear objeto Superheroe
         String nombre = extras.getString(MainActivity.NOMBRE);
         String alter_ego = extras.getString(MainActivity.ALTER_EGO);
         String historia = extras.getString(MainActivity.HISTORIA);
         float rating = extras.getFloat(MainActivity.RATING);
+
+
         //Incluimos los valores en ShowActivity
-        binding.showTituloHeroe.setText(nombre);
+        binding.showTituloHeroe.setText(nombre.);
         binding.showalterEgo.setText(alter_ego);
         binding.showHistoria.setText(historia);
         binding.showRatingBar.setRating(rating);
+
+         */
     }
 }
