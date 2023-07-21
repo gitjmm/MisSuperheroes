@@ -1,3 +1,7 @@
+/**
+ * @version 1.0
+ * @author Jorge Martínez Mostazo
+ */
 package com.jmmostazo.missuperheroes;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,10 +23,17 @@ public class ShowActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         //Obtenemos valores desde el objeto Superheroe
         Superheroe sh = extras.getParcelable(MainActivity.SUPERHEROE);
+        //Binding con la variable en xml superheroe enlazada a clase Superheroe
+        binding.setSuperheroe(sh);
+        /*
+        //Binding realizado sin variable (<data>) en xml
+
         binding.showTituloHeroe.setText(sh.getName());
         binding.showalterEgo.setText(sh.getAlter_ego());
         binding.showHistoria.setText(sh.getHistoria());
         binding.showRatingBar.setRating(sh.getEnergia());
+
+         */
         /*
         //Obtención de valores desde MainActivity sin crear objeto Superheroe
         String nombre = extras.getString(MainActivity.NOMBRE);

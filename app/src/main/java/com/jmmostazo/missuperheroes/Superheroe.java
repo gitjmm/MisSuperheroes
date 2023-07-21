@@ -1,3 +1,7 @@
+/**
+ * @version 1.0
+ * @author Jorge Martínez Mostazo
+ */
 package com.jmmostazo.missuperheroes;
 
 import android.os.Parcel;
@@ -5,13 +9,21 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
+
 public class Superheroe implements Parcelable{
+
     private String name;
     private String alter_ego;
     private String historia;
     private float energia;
 
-
+    /**
+     *
+     * @param name Nombre del superheroe
+     * @param alter_ego Alter ego del superheroe
+     * @param historia Biografía del superheroe
+     * @param energia Potencia del superheroe
+     */
     public Superheroe(String name, String alter_ego, String historia, float energia) {
         this.name = name;
         this.alter_ego = alter_ego;

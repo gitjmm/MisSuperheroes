@@ -1,16 +1,19 @@
-/*
-Jorge Martínez Mostazo
+/**
+ * @author Jorge Martínez Mostazo
+ **/
+/**
 MisSuperheroes. App que nos permite registrar información sobre superhéroes
-Elementos utilizados
-1. Views: EditText, ImageView, TextView, RatingBar, Button
-2. Linearayout, RelativeLayout, ConstraintLayout
-3. Colors.xml
-4. Github
-5. Paso de valores mediante intent de activity primario a secundario
-6. Creación de clase
-7. Paso de valores mediante un objeto. Parcelable.
-Serializa el objeto y lo permite pasar entre activities
- */
+ * Elementos utilizados
+ * 1. Views: EditText, ImageView, TextView, RatingBar, Button
+ * 2. Linearayout, RelativeLayout, ConstraintLayout
+ * 3. Colors.xml
+ * 4. Github
+ * 5. Paso de valores mediante intent de activity primario a secundario
+ * 6. Creación de clase
+ * 7. Paso de valores mediante un objeto. Parcelable.
+ * Serializa el objeto y lo permite pasar entre activities
+ * 8. Uso de variables de databinding.
+ **/
 package com.jmmostazo.missuperheroes;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +22,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.jmmostazo.missuperheroes.databinding.ActivityMainBinding;
+
 
 public class MainActivity extends AppCompatActivity {
 

@@ -2,9 +2,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <!--
+    data. Nos permite crear una variable enlazada a la
+    clase Superheroe y a sus atributos.
+    Más abajo en el xml podemos enlazar en el atributo
+    text el valor de cada atributo de la clase.
 
+    -->
     <data>
-
+        <variable
+        name="superheroe"
+            type="com.jmmostazo.missuperheroes.Superheroe"
+            />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,6 +31,7 @@
             android:padding="16dp"
             android:textColor="@color/black"
             android:textSize="20sp"
+            android:text="@{superheroe.historia}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +72,8 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:padding="16dp"
-            android:text="Iron man"
+            android:text="@{superheroe.name}"
+
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +88,8 @@
             android:layout_marginTop="34dp"
             android:layout_marginEnd="16dp"
             android:padding="16dp"
-            android:text="Tony Stark"
+            android:text="@{superheroe.alter_ego}"
+
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -105,6 +117,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:numStars="5"
+            android:rating="@{superheroe.energia}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/show_energia"
